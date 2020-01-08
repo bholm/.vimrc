@@ -26,6 +26,8 @@ Plugin 'tpope/vim-surround' 		" add quotes or brackets easily
 Plugin 'vim-scripts/YankRing.vim'
 Plugin 'qpkorr/vim-renamer'
 Plugin 'terryma/vim-multiple-cursors'	" Atom/Sublime like multi cursor editing
+Plugin '907th/vim-auto-save'		" Vim auto save
+Plugin 'lervag/vimtex'			" LaTeX plug in
 "Plugin 'Valloric/YouCompleteMe' 	" Completion
 "Plugin 'ervandew/supertab' 		" Tab completion
 
@@ -108,3 +110,16 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" vimtex setup
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
+
+
+" spell check
+setlocal spell
+set spelllang=en
+inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
