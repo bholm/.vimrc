@@ -17,7 +17,7 @@ Plugin 'scrooloose/nerdtree' 		" File manager
 Plugin 'dsolstad/vim-wombat256i' 	" Color scheme
 Plugin 'jiangmiao/auto-pairs' 		" Auto closes brackets, etc
 Plugin 'vim-syntastic/syntastic'	" Syntax checking
-Plugin 'tpope/vim-fugitive' 		" Git integration
+" Plugin 'tpope/vim-fugitive' 		" Git integration
 Plugin 'airblade/vim-gitgutter' 	" Git integration
 Plugin 'vim-scripts/tComment' 		" Comment easliy with gcc
 Plugin 'tpope/vim-repeat' 		" allow plugins to use . command
@@ -60,6 +60,7 @@ if has("vms")
 else
   set backup            " keep a backup file
 endif
+set backupdir=/private/tmp
 set history=50          " keep 50 lines of command line history
 set ruler               " show the cursor position all the time
 set showcmd             " display incomplete commands
@@ -120,6 +121,9 @@ let g:tex_conceal='abdmg'
 
 
 " spell check
-setlocal spell
-set spelllang=en
+" setlocal spell
+" set spelllang=en
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+set tabstop=4
+set shiftwidth=4
+set expandtab
